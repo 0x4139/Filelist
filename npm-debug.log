@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.1.10
+3 info using node@v0.10.33
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Volumes/dev/Filelist',
+8 silly cache add   type: 'directory' }
+9 verbose tar pack [ '/Users/vali/.npm/filelistro/1.0.0/package.tgz',
+9 verbose tar pack   '/Volumes/dev/Filelist' ]
+10 verbose tarball /Users/vali/.npm/filelistro/1.0.0/package.tgz
+11 verbose folder /Volumes/dev/Filelist
+12 info prepublish filelistro@1.0.0
+13 verbose addLocalTarball adding from inside cache /Users/vali/.npm/filelistro/1.0.0/package.tgz
+14 silly cache afterAdd filelistro@1.0.0
+15 verbose afterAdd /Users/vali/.npm/filelistro/1.0.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/vali/.npm/filelistro/1.0.0/package/package.json written
+17 silly publish { name: 'filelistro',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'api for filelist.ro',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository: { type: 'git', url: 'https://github.com/0x4139/Filelist' },
+17 silly publish   author: { name: '0x4139@gmail.com' },
+17 silly publish   license: 'MIT',
+17 silly publish   dependencies:
+17 silly publish    { cheerio: '^0.18.0',
+17 silly publish      promise: '^6.0.1',
+17 silly publish      request: '^2.51.0',
+17 silly publish      'tough-cookie-filestore': '0.0.1',
+17 silly publish      winston: '^0.8.3' },
+17 silly publish   gitHead: '12bf91d57cea1582709f22e91b06b418bd9c14f5',
+17 silly publish   readme: '# Filelist.ro API\nAn api for search and download for the private tracker filelist.ro\n```\nnpm install filelistro\n```\nit uses cookies.json to keep your cookies for future requests\n## Usage\n\n``` js\nvar Foo = require(\'filelistro\');\nvar Filelist= new Foo(\'user\',\'password\');\nFilelist.search(\'query\').then(function(torrents){\n\t//do whatever with torrents\n});\n\nFilelist.downloadTorrent(\'torrentHref\').then(function(path){\n\t//do whatever with the path\n});\n```\n\n##TODO\ncategory api\ncleanup\n\n## License\n\nMIT',
+17 silly publish   readmeFilename: 'Readme.md',
+17 silly publish   bugs: { url: 'https://github.com/0x4139/Filelist/issues' },
+17 silly publish   homepage: 'https://github.com/0x4139/Filelist',
+17 silly publish   _id: 'filelistro@1.0.0',
+17 silly publish   _shasum: 'c62024c6c7dbd4d6324e863507932356929a2dec',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name filelistro
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/filelistro
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /Users/vali/.npm/filelistro/1.0.0/package.tgz
+24 verbose request uri https://registry.npmjs.org/filelistro
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 16:48:36
+27 verbose request id ceb8010ae34516ad
+28 http request PUT https://registry.npmjs.org/filelistro
+29 http 403 https://registry.npmjs.org/filelistro
+30 verbose headers { date: 'Sun, 04 Jan 2015 14:48:37 GMT',
+30 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   'content-length': '2981',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   'x-served-by': 'cache-fra1239-FRA',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1420382916.881315,VS0,VE690',
+30 verbose headers   'keep-alive': 'timeout=10, max=50',
+30 verbose headers   connection: 'Keep-Alive' }
+31 verbose request invalidating /Users/vali/.npm/registry.npmjs.org/filelistro on PUT
+32 error publish Failed PUT 403
+33 verbose stack Error: forbidden cannot modify pre-existing version: 1.0.0
+33 verbose stack old={"name":"filelistro","version":"1.0.0","description":"api for filelist.ro","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/0x4139/Filelist"},"author":{"name":"0x4139@gmail.com"},"license":"MIT","dependencies":{"cheerio":"^0.18.0","promise":"^6.0.1","request":"^2.51.0","tough-cookie-filestore":"0.0.1","winston":"^0.8.3"},"gitHead":"b80c4e077d76a4a78f5f2790795c8574078b6cf1","bugs":{"url":"https://github.com/0x4139/Filelist/issues"},"homepage":"https://github.com/0x4139/Filelist","_id":"filelistro@1.0.0","_shasum":"aca14150dfb39a8aa0717d1f27153da344f3e924","_from":".","_npmVersion":"2.1.10","_nodeVersion":"0.10.33","_npmUser":{"name":"0x4139","email":"0x4139@gmail.com"},"maintainers":[{"name":"0x4139","email":"0x4139@gmail.com"}],"dist":{"shasum":"aca14150dfb39a8aa0717d1f27153da344f3e924","tarball":"http://registry.npmjs.org/filelistro/-/filelistro-1.0.0.tgz"}}
+33 verbose stack new={"name":"filelistro","version":"1.0.0","description":"api for filelist.ro","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/0x4139/Filelist"},"author":{"name":"0x4139@gmail.com"},"license":"MIT","dependencies":{"cheerio":"^0.18.0","promise":"^6.0.1","request":"^2.51.0","tough-cookie-filestore":"0.0.1","winston":"^0.8.3"},"gitHead":"12bf91d57cea1582709f22e91b06b418bd9c14f5","readme":"# Filelist.ro API\u000aAn api for search and download for the private tracker filelist.ro\u000a```\u000anpm install filelistro\u000a```\u000ait uses cookies.json to keep your cookies for future requests\u000a## Usage\u000a\u000a``` js\u000avar Foo = require('filelistro');\u000avar Filelist= new Foo('user','password');\u000aFilelist.search('query').then(function(torrents){\u000a\u0009//do whatever with torrents\u000a});\u000a\u000aFilelist.downloadTorrent('torrentHref').then(function(path){\u000a\u0009//do whatever with the path\u000a});\u000a```\u000a\u000a##TODO\u000acategory api\u000acleanup\u000a\u000a## License\u000a\u000aMIT","readmeFilename":"Readme.md","bugs":{"url":"https://github.com/0x4139/Filelist/issues"},"homepage":"https://github.com/0x4139/Filelist","_id":"filelistro@1.0.0","_shasum":"c62024c6c7dbd4d6324e863507932356929a2dec","_from":".","_npmVersion":"2.1.10","_nodeVersion":"0.10.33","_npmUser":{"name":"0x4139","email":"0x4139@gmail.com"},"maintainers":[{"name":"0x4139","email":"0x4139@gmail.com"}],"dist":{"shasum":"c62024c6c7dbd4d6324e863507932356929a2dec","tarball":"http://registry.npmjs.org/filelistro/-/filelistro-1.0.0.tgz"}}: filelistro
+33 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:234:14)
+33 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+33 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:372:22)
+33 verbose stack     at Request.emit (events.js:98:17)
+33 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1317:14)
+33 verbose stack     at Request.emit (events.js:117:20)
+33 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1265:12)
+33 verbose stack     at IncomingMessage.emit (events.js:117:20)
+33 verbose stack     at _stream_readable.js:943:16
+33 verbose stack     at process._tickCallback (node.js:419:13)
+34 verbose statusCode 403
+35 verbose pkgid filelistro
+36 verbose cwd /Volumes/dev/Filelist
+37 error Darwin 14.0.0
+38 error argv "node" "/usr/local/bin/npm" "publish"
+39 error node v0.10.33
+40 error npm  v2.1.10
+41 error code E403
+42 error forbidden cannot modify pre-existing version: 1.0.0
+42 error old={"name":"filelistro","version":"1.0.0","description":"api for filelist.ro","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/0x4139/Filelist"},"author":{"name":"0x4139@gmail.com"},"license":"MIT","dependencies":{"cheerio":"^0.18.0","promise":"^6.0.1","request":"^2.51.0","tough-cookie-filestore":"0.0.1","winston":"^0.8.3"},"gitHead":"b80c4e077d76a4a78f5f2790795c8574078b6cf1","bugs":{"url":"https://github.com/0x4139/Filelist/issues"},"homepage":"https://github.com/0x4139/Filelist","_id":"filelistro@1.0.0","_shasum":"aca14150dfb39a8aa0717d1f27153da344f3e924","_from":".","_npmVersion":"2.1.10","_nodeVersion":"0.10.33","_npmUser":{"name":"0x4139","email":"0x4139@gmail.com"},"maintainers":[{"name":"0x4139","email":"0x4139@gmail.com"}],"dist":{"shasum":"aca14150dfb39a8aa0717d1f27153da344f3e924","tarball":"http://registry.npmjs.org/filelistro/-/filelistro-1.0.0.tgz"}}
+42 error new={"name":"filelistro","version":"1.0.0","description":"api for filelist.ro","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/0x4139/Filelist"},"author":{"name":"0x4139@gmail.com"},"license":"MIT","dependencies":{"cheerio":"^0.18.0","promise":"^6.0.1","request":"^2.51.0","tough-cookie-filestore":"0.0.1","winston":"^0.8.3"},"gitHead":"12bf91d57cea1582709f22e91b06b418bd9c14f5","readme":"# Filelist.ro API\u000aAn api for search and download for the private tracker filelist.ro\u000a```\u000anpm install filelistro\u000a```\u000ait uses cookies.json to keep your cookies for future requests\u000a## Usage\u000a\u000a``` js\u000avar Foo = require('filelistro');\u000avar Filelist= new Foo('user','password');\u000aFilelist.search('query').then(function(torrents){\u000a\u0009//do whatever with torrents\u000a});\u000a\u000aFilelist.downloadTorrent('torrentHref').then(function(path){\u000a\u0009//do whatever with the path\u000a});\u000a```\u000a\u000a##TODO\u000acategory api\u000acleanup\u000a\u000a## License\u000a\u000aMIT","readmeFilename":"Readme.md","bugs":{"url":"https://github.com/0x4139/Filelist/issues"},"homepage":"https://github.com/0x4139/Filelist","_id":"filelistro@1.0.0","_shasum":"c62024c6c7dbd4d6324e863507932356929a2dec","_from":".","_npmVersion":"2.1.10","_nodeVersion":"0.10.33","_npmUser":{"name":"0x4139","email":"0x4139@gmail.com"},"maintainers":[{"name":"0x4139","email":"0x4139@gmail.com"}],"dist":{"shasum":"c62024c6c7dbd4d6324e863507932356929a2dec","tarball":"http://registry.npmjs.org/filelistro/-/filelistro-1.0.0.tgz"}}: filelistro
+43 error If you need help, you may report this error at:
+43 error     <http://github.com/npm/npm/issues>
+44 verbose exit [ 1, true ]

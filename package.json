@@ -1,6 +1,6 @@
 {
   "name": "filelistro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "api for filelist.ro",
   "main": "index.js",
   "scripts": {
