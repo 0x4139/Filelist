@@ -1,0 +1,18 @@
+{
+  "name": "filelistro",
+  "version": "1.0.0",
+  "description": "api for filelist.ro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "0x4139@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "promise": "^6.0.1",
+    "request": "^2.51.0",
+    "tough-cookie-filestore": "0.0.1",
+    "winston": "^0.8.3"
+  }
+}
