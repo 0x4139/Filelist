@@ -104,8 +104,11 @@ Filelist.prototype.downloadTorrent=function(torrentHref){
 	var that=this;
 	return new promise(function(resolve,reject){
 		var path=that._genHash();
-		request(torrentHref).pipe(fs.createWriteStream(path));
-		resolve(path);
+        var stream =fs.createWriteStream(path);
+        stream.on('close', function() {
+          resolve(path);
+        });
+		request(torrentHref).pipe(stream);
 	});
 };
 module.exports=Filelist;
