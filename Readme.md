@@ -9,11 +9,13 @@ it uses cookies.json to keep your cookies for future requests
 ``` js
 var Foo = require('filelistro');
 var Filelist= new Foo('user','password');
-Filelist.search('query').then(function(torrents){
-	//do whatever with torrents
+Filelist.loginAsync().then(()=>{
+	Filelist.searchAsync('query', 'pageNr', 'cat', 'searchin', 'sort').then(torrents=>{
+		//do whatever with torrents
+	});
 });
 
-Filelist.downloadTorrent('torrentHref').then(function(path){
+Filelist.downloadTorrent('torrentHref',[optional]torrentFileName).then(function(path){
 	//do whatever with the path
 });
 ```
